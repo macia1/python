@@ -43,7 +43,7 @@
 class Solution(object):
 	def twoSum(self, nums, target):
 		map = {}
-		for i,v in enumerate(nums):
+		for i in range(len(nums)):
 			temp = target - nums[i]
 			if map.get(temp) is not None:
 				return [i, map.get(temp)]
@@ -53,8 +53,8 @@ class Solution(object):
 if __name__ == '__main__':
 	s = Solution()
 	data = [1,3,4,3,452,3,13,2,341,4,1223,41,234,12,34,123,4,123,44]
-	res = s.twoSum(data, 246)
+	sum = 246
+	res = s.twoSum(data, sum)
 	for i in res:
 		print(data[i])
-	print("\n result index is ",res)
-
+	print("add sum ",sum, " result index is ", res)
